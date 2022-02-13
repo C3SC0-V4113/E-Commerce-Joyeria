@@ -18,7 +18,7 @@ Adicionalmente, si tenemos una llave SSH en nuestro ordenador y reconocida por G
 ### Colaboradores
 ------------
 - [Pamela Giselle Chipagua Hernández](https://github.com/Giselle-Ch "Pamela Giselle Chipagua Hernández") - Programación, diseño, lógica y manuales
-- [Rodrigo Enrique Flores Velásquez](https://github.com/MJames095 "Rodrigo Enrique Flores Velásquez") - Programación, diseño, lógica y manuales
+- [Rodrigo Enrique Flores Velásquez](https://github.com/refv-21 "Rodrigo Enrique Flores Velásquez") - Programación, diseño, lógica y manuales
 - [Cristian Odir López Revelo](https://github.com/Revelos "Cristian Odir López Revelo") - Programación, diseño, lógica y manuales
 - [Ebony Gabriela Peña Gómez](https://github.com/Bonny0110 "Ebony Gabriela Peña Gómez") - Programación, diseño, lógica y manuales
 - [Francisco José Valle Cornejo](https://github.com/C3SC0-V4113 "Francisco José Valle Cornejo") - Programación, diseño, lógica y manuales
