@@ -1,5 +1,5 @@
 # E-Commerce-Joyería
-Aplicación de Movil usando Java en Android Studio para la materia Desarrollo de Software para Móvilesde la Universidad Don Bosco
+Aplicación de Movil usando Java en Android Studio para la materia Desarrollo de Software para Móvilesde G02T la Universidad Don Bosco
 
 ### Prerrequisitos
 ------------
