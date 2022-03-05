@@ -1,5 +1,5 @@
 # E-Commerce-Joyería
-Aplicación de Movil usando Java en Android Studio para la materia Desarrollo de Software para Móviles [G02T] de la Universidad Don Bosco.
+Creación de una aplicación móvil de e-commerce para una joyería. Proyecto desarrollado en Android Studio [Java] correspondiente a la materia Diseño de Software para Móviles [DSM] impartida durante el ciclo 01-2022.
 
 ### Prerrequisitos
 ------------
@@ -39,8 +39,8 @@ para cualquier fin, incluso comercial.
 
 *No hay restricciones adicionales — No puede aplicar términos legales ni medidas tecnológicas que restrinjan legalmente a otras a hacer cualquier uso permitido por la licencia.*
 
-### Enlaces de Interés
+### Enlaces de interés
 ------------
-- [Espacio de Trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
+- [Espacio de trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
 - [Mockups en Figma](https://www.figma.com/team_invite/redeem/WrYHL2CWpDM3tnEG3xgY36)
-- [Documento Fase 1](https://drive.google.com/file/d/1j4x73VVAwIpxTNRoxUBVJHZXfEb2LDSx/view?usp=sharing "Documento Fase 1")
+- [Documento fase 1](https://drive.google.com/file/d/1j4x73VVAwIpxTNRoxUBVJHZXfEb2LDSx/view?usp=sharing "Documento Fase 1")
