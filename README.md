@@ -41,3 +41,5 @@ para cualquier fin, incluso comercial.
 
 ### Enlaces de Interés
 ------------
+- [Espacio de Trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
+- [Documento Fase 1](https://drive.google.com/file/d/1j4x73VVAwIpxTNRoxUBVJHZXfEb2LDSx/view?usp=sharing "Documento Fase 1")
