@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">Joyeria-Commerce</string>
+    <string name="app_name">DrawerNavigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Diamond</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="diamond">DIAMOND</string>
+    <string name="menu_home">Novedades</string>
+    <string name="menu_gallery">Pendientes</string>
+    <string name="menu_slideshow">Anillos</string>
+    <string name="menu_pulseras">Pulseras</string>
+    <string name="menu_charms">Charms</string>
+    <string name="menu_collares">Collares y Colgantes</string>
+    <string name="menu_ideas">Ideas de regalos</string>
+    <string name="menu_cuenta">Mi Cuenta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>
