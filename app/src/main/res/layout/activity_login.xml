@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFBB86FC"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageLoginArt"
+                android:layout_width="match_parent"
+                android:layout_height="235dp"
+                android:layout_marginStart="58dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="58dp"
+                app:srcCompat="@drawable/image14" />
+
+            <EditText
+                android:id="@+id/editTxtUser"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="56dp"
+                android:ems="10"
+                android:background="@color/white"
+                android:hint="@string/placeholder_user"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTxtPass"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="56dp"
+                android:ems="10"
+                android:background="@color/white"
+                android:hint="@string/placeholder_pass"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="56dp"
+                android:background="@drawable/btn_bg_design"
+                android:backgroundTint="#096bdb"
+                android:text="@string/btn_login"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textViewOpciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="70dp"
+                android:gravity="center_horizontal"
+                android:text="@string/login_options"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="56dp"
+                android:backgroundTint="#0750a5"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_bg_design"
+                android:text="@string/btn_google"
+                app:icon="@drawable/google_btn_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="14dp"
+                app:iconSize="24dp"
+                app:iconTint="#9E81BE" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="56dp"
+                android:backgroundTint="#468cd7"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_bg_design"
+                android:text="@string/btn_signUp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

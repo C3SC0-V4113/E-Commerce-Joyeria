@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "524666149463",
+    "firebase_url": "https://loginfirebasedsm-default-rtdb.firebaseio.com",
+    "project_id": "loginfirebasedsm",
+    "storage_bucket": "loginfirebasedsm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524666149463:android:4e6ecca64724950126e112",
+        "android_client_info": {
+          "package_name": "sv.edu.udb.appfarmaciadsm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524666149463-r5qaoqecc3uk56k7jv9hlb90vqrdplvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.udb.appfarmaciadsm",
+            "certificate_hash": "d7fe69e59380e728f06d0f17afe245c963dda0e7"
+          }
+        },
+        {
+          "client_id": "524666149463-jp4s86ko1rai9sqals3mrdf90gdpol5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFyWM3P8zdOuECvdh2b8JrvD2WiyVqntw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524666149463-jp4s86ko1rai9sqals3mrdf90gdpol5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
