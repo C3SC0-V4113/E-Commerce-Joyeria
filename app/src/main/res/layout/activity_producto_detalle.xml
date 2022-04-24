@@ -62,7 +62,77 @@
             android:minHeight="32dp"
             android:text="Acabada a mano con un con un recubrimiento electrolítico en oro rosa de segunda ley de 14k, esta joya única presenta una alianza abierta."
             android:textColor="@color/white"
+            android:alpha="0.7"
             android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/title_detalles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descripcion"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:minHeight="32dp"
+            android:text="MÁS DETALLES"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_detalles"
+            android:layout_below="@+id/title_detalles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerInsetStart="16dp"
+            app:dividerInsetEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/title_tallas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider_detalles"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:minHeight="24dp"
+            android:text="Seleccionar talla"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclview_tallas"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_tallas"/>
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_color"
+            android:layout_below="@+id/rclview_tallas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerInsetStart="16dp"
+            app:dividerInsetEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/title_colores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider_color"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:minHeight="24dp"
+            android:text="Color"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclview_colores"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_colores"/>
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
