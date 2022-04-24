@@ -42,8 +42,8 @@ public class ProductoDetalleActivity extends AppCompatActivity implements Tallas
         rcl_tallas.setLayoutManager(linearLayoutManager);
         rcl_tallas.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
 
-        rcl_colores.setLayoutManager(linearLayoutManager);
-        rcl_colores.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+        /*rcl_colores.setLayoutManager(linearLayoutManager);
+        rcl_colores.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));*/
 
         tallasAdapter=new TallasAdapter(tallasModelList,this);
 
