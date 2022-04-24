@@ -1,5 +1,6 @@
 package com.udb.edu.joyeria_commerce;
 
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.SurfaceControl;
@@ -72,5 +73,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+
     }
 }
