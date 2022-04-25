@@ -26,7 +26,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/img_detalle"
             app:layout_constraintTop_toBottomOf="@+id/img_detalle"
             android:background="#9E81BE">
@@ -102,13 +101,14 @@
                 android:text="Seleccionar talla"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rclview_tallas"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="3dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/title_tallas"/>
+                android:layout_below="@id/title_tallas"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp" />
             <com.google.android.material.divider.MaterialDivider
                 android:id="@+id/divider_color"
                 android:layout_below="@+id/rclview_tallas"
@@ -137,6 +137,50 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title_colores"/>
 
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rltv_lyt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/rltv_lyt"
+            app:layout_constraintTop_toBottomOf="@+id/rltv_lyt">
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_colores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:dividerInsetStart="16dp"
+                app:dividerInsetEnd="16dp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar al Carrito"
+                android:padding="20dp"
+                android:layout_margin="16dp"
+                app:icon="@drawable/ic_baseline_add_shopping_cart_24"
+                android:backgroundTint="#9E81BE"/>
+
+            <TextView
+                android:id="@+id/title_recomendados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_add"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:minHeight="32dp"
+                android:text="También te podría gustar"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclview_recomendados"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_recomendados"/>
         </RelativeLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
