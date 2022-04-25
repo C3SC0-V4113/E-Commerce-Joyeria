@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/drawable/color_fragment_drawable.xml" value="0.1215" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/drawable/talla_drawable.xml" value="0.121" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_producto_detalle.xml" value="0.2" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_recycler_view_colores.xml" value="0.6" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_recycler_view_tallas.xml" value="0.4" />
       </map>
     </option>
