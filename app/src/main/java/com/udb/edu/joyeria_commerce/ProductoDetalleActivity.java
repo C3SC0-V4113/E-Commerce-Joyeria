@@ -24,7 +24,7 @@ public class ProductoDetalleActivity extends AppCompatActivity implements Tallas
 
     String[] tallas={"3","3.5","4","4.5","5","5.5","6"};
 
-    String[] colores={"red","cyan","teal"};
+    String[] colores={"red","cyan","teal","blue","white","gray","aqua","fuchsia","navy","#085569"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,7 @@ public class ProductoDetalleActivity extends AppCompatActivity implements Tallas
         coloresAdapter=new ColorAdapter(colorModelList,this);
 
         rcl_tallas.setAdapter(tallasAdapter);
-        rcl_colores.setAdapter(tallasAdapter);
+        rcl_colores.setAdapter(coloresAdapter);
     }
 
     @Override

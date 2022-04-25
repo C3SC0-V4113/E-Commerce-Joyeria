@@ -47,15 +47,18 @@ public class ColorAdapter extends RecyclerView.Adapter<ColorAdapter.ColorAdapter
     public void onBindViewHolder(@NonNull ColorAdapter.ColorAdapterVh holder, int position) {
         ColorModel colorModel=colorModelList.get(position);
 
-        int colores= colorModel.getColorModel();
+        int colores=colorModel.getColorModel();
+
+       // colores=Color.valueOf();
+
 
         Drawable background=holder.rtlyt.getBackground();
         if (background instanceof ShapeDrawable) {
-            ((ShapeDrawable)background).getPaint().setColor(ContextCompat.getColor(context,colores));
+            ((ShapeDrawable)background).getPaint().setColor(colores);
         } else if (background instanceof GradientDrawable) {
-            ((GradientDrawable)background).setColor(ContextCompat.getColor(context,colores));
+            ((GradientDrawable)background).setColor(colores);
         } else if (background instanceof ColorDrawable) {
-            ((ColorDrawable)background).setColor(ContextCompat.getColor(context,colores));
+            ((ColorDrawable)background).setColor(colores);
         }
     }
 
