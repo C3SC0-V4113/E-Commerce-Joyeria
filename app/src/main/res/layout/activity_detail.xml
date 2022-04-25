@@ -11,7 +11,7 @@
         android:id="@+id/joyasName"
         android:gravity="center_vertical"
         android:text="joyas name"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_marginLeft="20dp"/>
 

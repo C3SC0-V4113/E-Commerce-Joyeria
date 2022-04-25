@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.udb.edu.joyeria_commerce.R;
 
 public class DetailActivity extends AppCompatActivity
 {

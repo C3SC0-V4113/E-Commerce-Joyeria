@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
+import com.udb.edu.joyeria_commerce.R;
 
 import java.util.ArrayList;
 
@@ -60,12 +61,12 @@ public class MainActivity extends AppCompatActivity
                             filteredJoyas.add(joyas);
                         }
                         else
+                        {
+                            if(joyas.getName().toLowerCase().contains(selectedFilter))
                             {
-                                if(joyas.getName().toLowerCase().contains(selectedFilter))
-                                {
-                                    filteredJoyas.add(joyas);
-                                }
+                                filteredJoyas.add(joyas);
                             }
+                        }
                     }
                 }
                 JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, filteredJoyas);
@@ -149,12 +150,12 @@ public class MainActivity extends AppCompatActivity
                     filteredJoyas.add(joyas);
                 }
                 else
+                {
+                    if(joyas.getName().toLowerCase().contains(currentSearchText.toLowerCase()))
                     {
-                        if(joyas.getName().toLowerCase().contains(currentSearchText.toLowerCase()))
-                        {
-                            filteredJoyas.add(joyas);
-                        }
+                        filteredJoyas.add(joyas);
                     }
+                }
             }
         }
 

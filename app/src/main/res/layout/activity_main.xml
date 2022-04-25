@@ -1,18 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#9E81BE"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <SearchView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/joyasListSearchView"
+        android:iconifiedByDefault="false"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
+        android:queryHint="Buscar joyas"></SearchView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Todos"
+            android:textAllCaps="false"
+            android:id="@+id/todosFilter"
+            android:background="@drawable/btn_bg_design"
+            android:onClick="todosFilterTapped"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Pulsera"
+            android:textAllCaps="false"
+            android:id="@+id/pulseraFilter"
+            android:background="@drawable/btn_bg_design"
+            android:onClick="pulseraFilterTapped"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Brazalete"
+            android:id="@+id/brazaleteFilter"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_bg_design"
+            android:onClick="brazaleteFilterTapped"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Anillo"
+            android:textAllCaps="false"
+            android:id="@+id/anilloFilter"
+            android:background="@drawable/btn_bg_design"
+            android:onClick="anilloFilterTapped"/>
+
+        <Button
+            android:id="@+id/aritosFilter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_design"
+            android:onClick="aritosFilterTapped"
+            android:textAllCaps="false"
+            android:text="Aritos" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Collar"
+            android:textAllCaps="false"
+            android:id="@+id/collarFilter"
+            android:background="@drawable/btn_bg_design"
+            android:onClick="collarFilterTapped"/>
+
+    </LinearLayout>
+
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/joyasListView"/>
+
+</LinearLayout>
