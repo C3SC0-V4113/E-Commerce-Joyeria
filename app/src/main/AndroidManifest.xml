@@ -12,19 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrawerNavigation">
         <activity
-
+            android:name=".Filtro"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="true">
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".Splash"
-
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
