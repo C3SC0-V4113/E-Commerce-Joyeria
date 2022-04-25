@@ -1,4 +1,4 @@
-package sv.edu.udb.appfarmaciadsm;
+package com.udb.edu.joyeria_commerce;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,6 +13,8 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import sv.edu.udb.appfarmaciadsm.R;
 
 
 public class HomeActivity extends AppCompatActivity {

@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFarmaciaDSM">
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name="com.udb.edu.joyeria_commerce.HomeActivity" />
+        <activity android:name="com.udb.edu.joyeria_commerce.RegistrationActivity" />
+        <activity android:name="com.udb.edu.joyeria_commerce.LoginActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.udb.edu.joyeria_commerce.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

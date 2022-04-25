@@ -1,9 +1,11 @@
-package sv.edu.udb.appfarmaciadsm;
+package com.udb.edu.joyeria_commerce;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import sv.edu.udb.appfarmaciadsm.R;
 
 public class SplashActivity extends AppCompatActivity {
 

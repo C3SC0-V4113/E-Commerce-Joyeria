@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFBB86FC"
-    tools:context=".LoginActivity">
+    tools:context="com.udb.edu.joyeria_commerce.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
