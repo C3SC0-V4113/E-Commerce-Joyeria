@@ -29,6 +29,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.udb.edu.joyeria_commerce.databinding.ActivityMainBinding;
 
@@ -44,9 +45,20 @@ public class MainActivity extends AppCompatActivity {
     String nombre;
 
     SharedPreferences settings;
+/*=======
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Button boton;
+>>>>>>> 7be23ef709ac4345ad8b4938cc81f0b9a96b170b/*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //boton=findViewById(R.id.button);
         super.onCreate(savedInstanceState);
         settings = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
 
@@ -119,4 +131,9 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
 
     }
+
+   /* public void ProductoDetalle(View v){
+        Intent intent=new Intent(MainActivity.this, ProductoDetalleActivity.class);
+        startActivity(intent);
+    }*/
 }

@@ -1,15 +1,19 @@
 package com.udb.edu.joyeria_commerce.ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -28,8 +32,8 @@ public class ProductosFragment extends Fragment {
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
     public static DatabaseReference refProductos = database.getReference("productos");
 
-    List<Producto> productos;
-    ListView listaProductos;
+    private List<Producto> productos;
+    private ListView listaProductos;
 
 
     public ProductosFragment() {
@@ -50,10 +54,30 @@ public class ProductosFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_productos, container, false);
     }
 
+
+
+
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         listaProductos = view.findViewById(R.id.ListaProductos);
+        listaProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //Intent intent = new Intent(getContext(), FormMovie.class);
+
+                /*intent.putExtra("titulo",peliculas.get(i).getTitulo());
+                intent.putExtra("descripcion",peliculas.get(i).getDescripcion());
+                //intent.putExtra("foto",peliculas.get(i).getFoto());
+                selectedPhoto=peliculas.get(i).getFoto();
+                intent.putExtra("estreno",peliculas.get(i).getEsteno());
+                intent.putExtra("rate",peliculas.get(i).getRate());*/
+                DetalleProductoFragment detalle = new DetalleProductoFragment();
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
+
+            }
+        });
     }
 
     public void inicializar(){

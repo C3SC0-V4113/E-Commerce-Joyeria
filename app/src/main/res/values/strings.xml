@@ -27,7 +27,9 @@
 
     <string name="app_name">Joyeria-Commerce</string>
 
+
     <!--        Pantalla de productos  -->
     <string name="txtMarcaProductos">DIAMOND</string>
+
 
 </resources>
