@@ -9,15 +9,15 @@
         android:checkableBehavior="single"
         >
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/productosFragment"
             android:icon="@drawable/novedades"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/pendientesFragment"
             android:icon="@drawable/pendientes"
             android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/anillosFragment"
             android:icon="@drawable/anillos"
             android:title="@string/menu_slideshow" />
         <item

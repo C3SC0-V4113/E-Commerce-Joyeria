@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "529509772299",
+    "firebase_url": "https://joyeria-diamond-default-rtdb.firebaseio.com",
     "project_id": "joyeria-diamond",
     "storage_bucket": "joyeria-diamond.appspot.com"
   },
@@ -13,6 +14,22 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "529509772299-45l10ittmi4aeu2sfsi4hckrjifoa1d6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udb.edu.joyeria_commerce",
+            "certificate_hash": "f184800731d3de42a99128f1b3fd281c973ba549"
+          }
+        },
+        {
+          "client_id": "529509772299-igug2kba94no8sebp06iisancvoruvvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udb.edu.joyeria_commerce",
+            "certificate_hash": "2d9314c6e08d0972a8db62a296242d06e3229766"
+          }
+        },
         {
           "client_id": "529509772299-ail7ucv6r2kfb4f1ceecqqtvmrnn8aje.apps.googleusercontent.com",
           "client_type": 3

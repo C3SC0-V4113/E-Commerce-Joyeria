@@ -4,37 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
 
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/productosFragment">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.udb.edu.joyeria_commerce.ui.home.HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/productosFragment"
+        android:name="com.udb.edu.joyeria_commerce.ui.ProductosFragment"
 
+        tools:layout="@layout/fragment_productos" />
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.udb.edu.joyeria_commerce.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery"
+        android:id="@+id/pendientesFragment"
+        android:name="com.udb.edu.joyeria_commerce.ui.PendientesFragment"
 
-        />
-
+        tools:layout="@layout/fragment_pendientes" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.udb.edu.joyeria_commerce.ui.anillos.Anillos"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/anillosFragment"
+        android:name="com.udb.edu.joyeria_commerce.ui.AnillosFragment"
 
+        tools:layout="@layout/fragment_anillos" />
     <fragment
-        android:id="@+id/nav_slideshow1"
-        android:name="com.udb.edu.joyeria_commerce.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_pulseras"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_slideshow2"
-        android:name="com.udb.edu.joyeria_commerce.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_charms"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/pulserasFragment"
+        android:name="com.udb.edu.joyeria_commerce.ui.PulserasFragment"
+        android:label="fragment_pulseras"
+        tools:layout="@layout/fragment_pulseras" />
 
 </navigation>
