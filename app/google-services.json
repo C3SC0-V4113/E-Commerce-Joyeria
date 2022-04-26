@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "529509772299-5695v1fsp8d0b2atiku9reji2njopjfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udb.edu.joyeria_commerce",
+            "certificate_hash": "e33bb31b9482f4a7fb01c149cf4a21e6af42082e"
+          }
+        },
+        {
           "client_id": "529509772299-igug2kba94no8sebp06iisancvoruvvg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
