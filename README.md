@@ -39,8 +39,14 @@ para cualquier fin, incluso comercial.
 
 *No hay restricciones adicionales — No puede aplicar términos legales ni medidas tecnológicas que restrinjan legalmente a otras a hacer cualquier uso permitido por la licencia.*
 
-### Enlaces de interés
+### Enlaces de interés (Fase 1)
 ------------
 - [Espacio de trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
 - [Mockups en Figma](https://www.figma.com/team_invite/redeem/WrYHL2CWpDM3tnEG3xgY36)
 - [Documento fase 1](https://drive.google.com/file/d/1j4x73VVAwIpxTNRoxUBVJHZXfEb2LDSx/view?usp=sharing "Documento Fase 1")
+
+### Enlaces de interés (Fase 2)
+------------
+- [Espacio de trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
+- [Manual de Usuario y Técnico](https://drive.google.com/drive/folders/10OFg_1oHWp5pbpFbAA2WQK0czqS-fyt7?usp=sharing)
+- [Enlace de Video Demostrativo](https://youtu.be/Ly1GMK7rtfw "Enlace de Video Demostrativo")
