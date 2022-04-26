@@ -14,16 +14,18 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/pendientesFragment"
-            android:icon="@drawable/pendientes"
+            android:icon="@drawable/earings"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/anillosFragment"
             android:icon="@drawable/anillos"
             android:title="@string/menu_slideshow" />
         <item
+            android:id="@+id/pulserasFragment"
             android:icon="@drawable/pulseras"
             android:title="@string/menu_pulseras" />
         <item
+            android:id="@+id/charmsFragment"
             android:icon="@drawable/charms"
             android:title="@string/menu_charms" />
         <item

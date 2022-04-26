@@ -26,18 +26,17 @@ import com.udb.edu.joyeria_commerce.datos.Producto;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class AnillosFragment extends Fragment {
+public class CharmsFragment extends Fragment {
 
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
     public static DatabaseReference refProductos = database.getReference("productos");
 
-    Query consultaAnillos = refProductos.orderByChild("categoria").equalTo("Anillos");
+    Query consultaCharms = refProductos.orderByChild("categoria").equalTo("Charms");
 
     private List<Producto> productos;
-    private ListView listaAnillos;
+    private ListView listaCharms;
 
-    public AnillosFragment() {
+    public CharmsFragment() {
         // Required empty public constructor
     }
 
@@ -51,14 +50,14 @@ public class AnillosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_anillos, container, false);
+        return inflater.inflate(R.layout.fragment_charms, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        listaAnillos = view.findViewById(R.id.ListaProductos);
-        listaAnillos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listaCharms = view.findViewById(R.id.ListaProductos);
+        listaCharms.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //Intent intent = new Intent(getContext(), FormMovie.class);
@@ -82,7 +81,7 @@ public class AnillosFragment extends Fragment {
         // Mostrar lista de productos ingresados en la base
         productos = new ArrayList<>();
 
-        consultaAnillos.addValueEventListener(new ValueEventListener() {
+        consultaCharms.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 productos.removeAll(productos);
@@ -94,7 +93,7 @@ public class AnillosFragment extends Fragment {
                 }
 
                 AdaptadorProducto adapter = new AdaptadorProducto((Activity) getContext(), productos);
-                listaAnillos.setAdapter(adapter);
+                listaCharms.setAdapter(adapter);
             }
 
             @Override

@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductosFragment extends Fragment {
+
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
     public static DatabaseReference refProductos = database.getReference("productos");
 
@@ -53,10 +54,6 @@ public class ProductosFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_productos, container, false);
     }
-
-
-
-
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
