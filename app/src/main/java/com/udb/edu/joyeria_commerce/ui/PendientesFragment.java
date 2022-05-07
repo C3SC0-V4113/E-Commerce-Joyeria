@@ -1,8 +1,11 @@
 package com.udb.edu.joyeria_commerce.ui;
 
+
 import android.os.Bundle;
 
+
 import androidx.fragment.app.Fragment;
+
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,4 +32,5 @@ public class PendientesFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pendientes, container, false);
     }
+
 }

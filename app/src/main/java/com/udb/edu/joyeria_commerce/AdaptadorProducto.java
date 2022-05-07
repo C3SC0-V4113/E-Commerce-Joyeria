@@ -43,8 +43,6 @@ public class AdaptadorProducto extends ArrayAdapter<Producto> {
 
         String enlaceImagen = productos.get(position).getImagen();
 
-        Uri enlace = Uri.parse(enlaceImagen);
-
         Picasso.get().load(enlaceImagen).into(ivImagenProducto);
 
 

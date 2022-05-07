@@ -3,7 +3,6 @@
     package="com.udb.edu.joyeria_commerce">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrawerNavigation">
         <activity
+            android:name=".ui.CollaresFragment"
+            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".ui.RegalosFragment" -->
+        <!-- android:exported="false" /> -->
+        <activity
             android:name=".Filtro"
             android:exported="false" />
         <activity
@@ -21,7 +26,7 @@
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Splash"
             android:exported="true">

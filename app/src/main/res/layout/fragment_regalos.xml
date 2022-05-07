@@ -5,33 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9E81B3"
-    tools:context=".ui.PendientesFragment">
+    tools:context=".ui.RegalosFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:text="Regalos" />
+            android:layout_marginVertical="20dp"
+            android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            app:srcCompat="@drawable/regalos"
-            app:tint="#CCBEE3" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="2"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                app:srcCompat="@drawable/regalos"
+                app:tint="#CCBEE3" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:paddingHorizontal="20dp"
-            android:text="Regalale algo a una persona especial con uno de nuestros paquetes!" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="24dp"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:text="@string/menu_ideas" />
+
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textAlignment="center"-->
+<!--            android:paddingHorizontal="20dp"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:textSize="20dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="Regalale algo a una persona especial con uno de nuestros paquetes!" />-->
 
         <ListView
             android:id="@+id/ListaRegalos"
@@ -90,6 +105,14 @@
 
     </LinearLayout>
 
+<!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
 
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+
+<!--        android:gravity="center_vertical"-->
+
+<!--        android:text="Hello Regalos" />-->
 
 </FrameLayout>
