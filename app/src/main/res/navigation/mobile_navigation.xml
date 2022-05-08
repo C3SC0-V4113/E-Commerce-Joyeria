@@ -31,5 +31,15 @@
         android:name="com.udb.edu.joyeria_commerce.ui.PulserasFragment"
         android:label="fragment_pulseras"
         tools:layout="@layout/fragment_pulseras" />
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="com.udb.edu.joyeria_commerce.PagoFragment"
+        android:label="fragment_pago"
+        tools:layout="@layout/fragment_pago" />
+    <fragment
+        android:id="@+id/cuentaFragment"
+        android:name="com.udb.edu.joyeria_commerce.CuentaFragment"
+        android:label="fragment_cuenta"
+        tools:layout="@layout/fragment_cuenta" />
 
 </navigation>

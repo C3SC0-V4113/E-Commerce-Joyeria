@@ -30,6 +30,10 @@
 
     <!--        Pantalla de productos  -->
     <string name="txtMarcaProductos">DIAMOND</string>
-
+    <string-array name="methods_array">
+        <item>Credit Card</item>
+        <item>Debit Card</item>
+        <item>Personal</item>
+    </string-array>
 
 </resources>

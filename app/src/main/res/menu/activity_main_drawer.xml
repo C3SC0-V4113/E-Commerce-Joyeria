@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#9E81BE"
+
     tools:showIn="navigation_view">
 
     <group
-        android:background="#9E81BE"
+        
         android:checkableBehavior="single"
         >
         <item
@@ -21,6 +21,7 @@
             android:icon="@drawable/anillos"
             android:title="@string/menu_slideshow" />
         <item
+            android:id="@+id/pagoFragment"
             android:icon="@drawable/pulseras"
             android:title="@string/menu_pulseras" />
         <item
