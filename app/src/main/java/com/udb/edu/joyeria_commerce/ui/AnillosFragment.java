@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.AdapterView;
 import android.widget.ListView;
 
@@ -20,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.udb.edu.joyeria_commerce.AdaptadorProducto;
+
+import com.udb.edu.joyeria_commerce.Filtro;
 import com.udb.edu.joyeria_commerce.R;
 import com.udb.edu.joyeria_commerce.datos.Producto;
 
@@ -29,6 +32,7 @@ import java.util.List;
 
 public class AnillosFragment extends Fragment {
 
+
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
     public static DatabaseReference refProductos = database.getReference("productos");
 
@@ -36,6 +40,7 @@ public class AnillosFragment extends Fragment {
 
     private List<Producto> productos;
     private ListView listaAnillos;
+
 
     public AnillosFragment() {
         // Required empty public constructor
@@ -53,6 +58,8 @@ public class AnillosFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_anillos, container, false);
     }
+
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -103,4 +110,5 @@ public class AnillosFragment extends Fragment {
             }
         });
     }
+
 }

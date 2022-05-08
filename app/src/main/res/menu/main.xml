@@ -6,7 +6,7 @@
         android:orderInCategory="100"
 
         android:icon="@mipmap/icono_blanco_busqueda"
-        android:title="@string/action_settings"
+        android:title="Buscar"
         app:showAsAction="always" />
     <item
         android:id="@+id/logout"

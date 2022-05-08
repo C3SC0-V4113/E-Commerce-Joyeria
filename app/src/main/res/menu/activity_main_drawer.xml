@@ -30,9 +30,11 @@
             android:icon="@drawable/charms"
             android:title="@string/menu_charms" />
         <item
+            android:id="@+id/collaresFragment2"
             android:icon="@drawable/collares"
             android:title="@string/menu_collares" />
         <item
+            android:id="@+id/regalosFragment2"
             android:icon="@drawable/regalos"
             android:title="@string/menu_ideas" />
         <item

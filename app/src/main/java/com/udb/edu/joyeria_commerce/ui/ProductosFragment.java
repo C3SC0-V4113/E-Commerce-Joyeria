@@ -1,7 +1,9 @@
 package com.udb.edu.joyeria_commerce.ui;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,23 +12,31 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.udb.edu.joyeria_commerce.AdaptadorProducto;
+import com.udb.edu.joyeria_commerce.FiltroFragment;
 import com.udb.edu.joyeria_commerce.R;
 import com.udb.edu.joyeria_commerce.datos.Producto;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ProductosFragment extends Fragment {
 
@@ -35,7 +45,7 @@ public class ProductosFragment extends Fragment {
 
     private List<Producto> productos;
     private ListView listaProductos;
-
+    ImageButton ib;
 
     public ProductosFragment() {
         // Required empty public constructor
@@ -46,13 +56,23 @@ public class ProductosFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         inicializar();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_productos, container, false);
+         View vista=inflater.inflate(R.layout.fragment_productos, container, false);
+         ib = vista.findViewById(R.id.btnBusqueda);
+         ib.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 FiltroFragment detalle = new FiltroFragment();
+                 getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
+             }
+         });
+        return vista;
     }
 
     @Override
@@ -61,24 +81,21 @@ public class ProductosFragment extends Fragment {
         listaProductos = view.findViewById(R.id.ListaProductos);
         listaProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //Intent intent = new Intent(getContext(), FormMovie.class);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                /*intent.putExtra("titulo",peliculas.get(i).getTitulo());
-                intent.putExtra("descripcion",peliculas.get(i).getDescripcion());
-                //intent.putExtra("foto",peliculas.get(i).getFoto());
-                selectedPhoto=peliculas.get(i).getFoto();
-                intent.putExtra("estreno",peliculas.get(i).getEsteno());
-                intent.putExtra("rate",peliculas.get(i).getRate());*/
+
                 DetalleProductoFragment detalle = new DetalleProductoFragment();
                 getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
 
             }
         });
     }
+    public void buscar(View v){
+        FiltroFragment filtro = new FiltroFragment();
+        getFragmentManager().beginTransaction().replace(R.id.filtroFragment,filtro).commit();
+    }
 
     public void inicializar(){
-        //listaProductos = findViewById(R.id.ListaProductos);
 
         // Mostrar lista de productos ingresados en la base
         productos = new ArrayList<>();
@@ -103,5 +120,7 @@ public class ProductosFragment extends Fragment {
 
             }
         });
+
     }
+
 }

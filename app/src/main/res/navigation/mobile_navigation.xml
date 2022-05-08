@@ -47,5 +47,20 @@
         android:name="com.udb.edu.joyeria_commerce.ui.CharmsFragment"
 
         tools:layout="@layout/fragment_charms" />
+    <fragment
+        android:id="@+id/regalosFragment2"
+        android:name="com.udb.edu.joyeria_commerce.ui.RegalosFragment"
+        android:label="fragment_regalos"
+        tools:layout="@layout/fragment_regalos" />
+    <fragment
+        android:id="@+id/collaresFragment2"
+        android:name="com.udb.edu.joyeria_commerce.ui.CollaresFragment"
+        android:label="fragment_collares"
+        tools:layout="@layout/fragment_collares" />
+    <fragment
+        android:id="@+id/filtroFragment"
+        android:name="com.udb.edu.joyeria_commerce.FiltroFragment"
+        android:label="fragment_filtro"
+        tools:layout="@layout/fragment_filtro" />
 
 </navigation>

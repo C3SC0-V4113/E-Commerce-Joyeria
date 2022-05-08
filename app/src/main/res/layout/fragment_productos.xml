@@ -41,6 +41,7 @@
             android:layout_height="35dp"
             android:background="#CCBEE3"
             android:layout_marginTop="15dp"
+
             android:layout_weight="1"
             app:srcCompat="@mipmap/icono_busqueda"
             tools:srcCompat="@mipmap/icono_busqueda" />
