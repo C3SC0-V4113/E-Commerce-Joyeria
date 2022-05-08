@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -51,7 +52,27 @@ public class RegalosFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         listaRegalos = view.findViewById(R.id.ListaRegalos);
+
+        listaRegalos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
+
+                //Paso de datos del regalo seleccionado al fragment_detalle_regalo
+                Bundle bundle = new Bundle();
+                bundle.putString("nombreRegalo", regalos.get(position).getNombre());
+                bundle.putString("precioRegalo", regalos.get(position).getPrecio().toString());
+                bundle.putString("detalleRegalo", regalos.get(position).getDetalle());
+                bundle.putString("imagenRegalo", regalos.get(position).getImagen());
+                getParentFragmentManager().setFragmentResult("key", bundle);
+
+                //Cambio de vista a fragment_detalle_regalo
+                DetalleRegaloFragment detalle = new DetalleRegaloFragment();
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
+
+            }
+        });
     }
+
 
     public void inicializar(){
         regalos = new ArrayList<>();

@@ -29,7 +29,7 @@ public class CollaresFragment extends Fragment {
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
     public static DatabaseReference refProductos = database.getReference("productos");
 
-    Query consultaCollares = refProductos.orderByChild("categoria").equalTo("Collar");
+    Query consultaCollares = refProductos.orderByChild("categoria").equalTo("Collares y colgantes");
 
     private List<Producto> productos;
     private ListView listaCollares;

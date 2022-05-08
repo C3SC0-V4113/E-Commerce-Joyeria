@@ -49,7 +49,6 @@ public class AdaptadorRegalos extends ArrayAdapter<RegaloModel> {
 
         tvNombreRegalo.setText("" + regalos.get(position).getNombre());
         tvPrecioRegalo.setText("$" + regalos.get(position).getPrecio());
-        tvDetalleRegalo.setText("" + regalos.get(position).getDetalle());
 
         return rowview;
     }

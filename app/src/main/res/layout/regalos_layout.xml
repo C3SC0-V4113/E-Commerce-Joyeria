@@ -38,18 +38,6 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
-        <TextView
-            android:id="@+id/tvDetalleRegalo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="24dp"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="60dp"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF" />
-
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,9 @@
 package com.udb.edu.joyeria_commerce.ui;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +20,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,7 +42,6 @@ public class ProductosFragment extends Fragment {
 
     private List<Producto> productos;
     private ListView listaProductos;
-
 
     public ProductosFragment() {
         // Required empty public constructor
@@ -68,15 +71,9 @@ public class ProductosFragment extends Fragment {
         listaProductos = view.findViewById(R.id.ListaProductos);
         listaProductos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //Intent intent = new Intent(getContext(), FormMovie.class);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                /*intent.putExtra("titulo",peliculas.get(i).getTitulo());
-                intent.putExtra("descripcion",peliculas.get(i).getDescripcion());
-                //intent.putExtra("foto",peliculas.get(i).getFoto());
-                selectedPhoto=peliculas.get(i).getFoto();
-                intent.putExtra("estreno",peliculas.get(i).getEsteno());
-                intent.putExtra("rate",peliculas.get(i).getRate());*/
+
                 DetalleProductoFragment detalle = new DetalleProductoFragment();
                 getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
 

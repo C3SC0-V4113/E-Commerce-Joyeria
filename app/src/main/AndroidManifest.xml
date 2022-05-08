@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrawerNavigation">
         <activity
-            android:name=".ui.CollaresFragment"
+            android:name=".ui.DetalleRegaloFragment"
             android:exported="false" />
-        <!-- <activity -->
+        <activity
+            android:name=".ui.CollaresFragment"
+            android:exported="false" /> <!-- <activity -->
         <!-- android:name=".ui.RegalosFragment" -->
         <!-- android:exported="false" /> -->
         <activity

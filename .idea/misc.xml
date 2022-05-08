@@ -10,11 +10,15 @@
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/content_main.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_anillos.xml" value="0.22" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_collares.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_detalle_producto.xml" value="0.25" />
+        <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_detalle_regalo.xml" value="0.2" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_pendientes.xml" value="0.22" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_productos.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_pulseras.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_recycler_view_productos.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_regalos.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/fragment_regalos_detalle.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/joyas_cell.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/nav_header_main.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/productos_layout.xml" value="0.1638888888888889" />
         <entry key="..\:/DSMLab/Proyecto/E-Commerce-Joyeria/app/src/main/res/layout/regalos_layout.xml" value="0.20416666666666666" />
