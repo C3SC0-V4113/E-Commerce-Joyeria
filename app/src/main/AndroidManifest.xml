@@ -3,7 +3,6 @@
     package="com.udb.edu.joyeria_commerce">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -21,7 +20,7 @@
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Splash"
             android:exported="true">

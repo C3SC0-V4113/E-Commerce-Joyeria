@@ -7,19 +7,21 @@ public class Producto {
     private String detalle;
     private Double precio;
     private String imagen;
+    private String categoria;
     String key;
 
     public Producto(){
 
     }
 
-    public Producto(String nombre, String mcarca, String material, String detalle, Double precio, String imagen){
+    public Producto(String nombre, String mcarca, String material, String detalle, Double precio, String imagen, String categoria){
         this.nombre = nombre;
         this.marca = marca;
         this.material = material;
         this.detalle = detalle;
         this.precio = precio;
         this.imagen = imagen;
+        this.categoria = categoria;
     }
 
     public String getNombre() { return nombre; }
@@ -51,6 +53,9 @@ public class Producto {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+    public String getCategoria() { return categoria; }
+    public void setCategoria(String categoria) { this.categoria = categoria; }
 
     public String getKey() { return key; }
     public void setKey(String key) {
