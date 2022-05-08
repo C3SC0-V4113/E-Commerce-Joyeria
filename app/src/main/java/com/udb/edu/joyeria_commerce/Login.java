@@ -93,6 +93,8 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onComplete(@Nullable Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            System.out.println("REPUESTA DE GOOGLE"+task.getResult());
                             SharedPreferences.Editor edit = settings.edit();
                             edit.putString("email",email);
                             edit.putString("password",password);

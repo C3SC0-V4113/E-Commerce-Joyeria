@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         settings = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
 
         nombre=settings.getString("email","");
-        Toast.makeText(getApplicationContext(),"Bienvinido "+nombre,Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Bienvenido "+nombre,Toast.LENGTH_LONG).show();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
 
-                R.id.anillosFragment, R.id.pendientesFragment, R.id.productosFragment, R.id.pulserasFragment, R.id.charmsFragment, R.id.collaresFragment2, R.id.regalosFragment2)
+                R.id.anillosFragment, R.id.pendientesFragment, R.id.productosFragment, R.id.pulserasFragment, R.id.charmsFragment, R.id.collaresFragment2, R.id.regalosFragment2,R.id.cuentaFragment)
 
                 .setOpenableLayout(drawer)
                 .build();
