@@ -76,7 +76,11 @@ public class AnillosFragment extends Fragment {
                 selectedPhoto=peliculas.get(i).getFoto();
                 intent.putExtra("estreno",peliculas.get(i).getEsteno());
                 intent.putExtra("rate",peliculas.get(i).getRate());*/
+                Bundle bundle = new Bundle();
+                bundle.putString("nombre", productos.get(i).getNombre());
+                bundle.putString("categoria",productos.get(i).getCategoria());
                 DetalleProductoFragment detalle = new DetalleProductoFragment();
+                detalle.setArguments(bundle);
                 getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
 
             }

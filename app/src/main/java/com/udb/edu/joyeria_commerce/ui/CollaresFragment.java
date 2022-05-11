@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -55,6 +56,27 @@ public class CollaresFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         listaCollares = view.findViewById(R.id.ListaCollares);
+
+        listaCollares.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //Intent intent = new Intent(getContext(), FormMovie.class);
+
+                /*intent.putExtra("titulo",peliculas.get(i).getTitulo());
+                intent.putExtra("descripcion",peliculas.get(i).getDescripcion());
+                //intent.putExtra("foto",peliculas.get(i).getFoto());
+                selectedPhoto=peliculas.get(i).getFoto();
+                intent.putExtra("estreno",peliculas.get(i).getEsteno());
+                intent.putExtra("rate",peliculas.get(i).getRate());*/
+                Bundle bundle = new Bundle();
+                bundle.putString("nombre", productos.get(i).getNombre());
+                bundle.putString("categoria",productos.get(i).getCategoria());
+                DetalleProductoFragment detalle = new DetalleProductoFragment();
+                detalle.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
+
+            }
+        });
     }
 
     public void inicializar(){

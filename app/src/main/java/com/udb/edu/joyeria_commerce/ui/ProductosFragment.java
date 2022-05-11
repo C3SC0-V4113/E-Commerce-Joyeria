@@ -85,6 +85,7 @@ public class ProductosFragment extends Fragment {
 
                 Bundle bundle = new Bundle();
                 bundle.putString("nombre", productos.get(position).getNombre());
+                bundle.putString("categoria",productos.get(position).getCategoria());
                 DetalleProductoFragment detalle = new DetalleProductoFragment();
                 detalle.setArguments(bundle);
                 getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();

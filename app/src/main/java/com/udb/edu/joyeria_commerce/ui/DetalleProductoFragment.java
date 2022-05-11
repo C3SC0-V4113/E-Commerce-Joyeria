@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,10 +43,11 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
 
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
     public static DatabaseReference refProductos = database.getReference("productos");
+    public static DatabaseReference refProductos2 = database.getReference("productos");
 
     private Producto productoPrinci;
 
-    Query consultaProducto, consultaCategoria = refProductos.orderByChild("categoria").equalTo("Charms");;
+    Query consultaProducto, consultaCategoria;
 
     ImageView imagenPrincipal;
     TextView txtPrecio,txtTitulo,txtDescripcion;
@@ -65,6 +68,7 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
 
     String[] colores={"red","cyan","teal","blue","white","gray","fuchsia","navy","#085569"};
 
+    String strtext,strcategoria;
 
     public DetalleProductoFragment() {
         // Required empty public constructor
@@ -74,6 +78,48 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        strtext = getArguments().getString("nombre");
+        strcategoria = getArguments().getString("categoria");
+
+        Log.e("onCreate: ",strcategoria );
+
+        consultaProducto=refProductos.orderByChild("nombre").equalTo(strtext);
+
+        consultaCategoria = refProductos2.orderByChild("categoria").equalTo(strcategoria);
+
+        consultaCategoria.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()){
+                    for (DataSnapshot data: task.getResult().getChildren()){
+                        Producto producto = data.getValue(Producto.class);
+                        producto.setKey(data.getKey());
+                        productoModelList.add(producto);
+                    }
+                }
+            }
+        });
+
+        Log.e("consultaCategoria: ", consultaCategoria.toString());
+
+        /*consultaCategoria.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dato: snapshot.getChildren()) {
+                    Log.e("onDataChange: ","Probando" );
+                    Producto producto = dato.getValue(Producto.class);
+                    producto.setKey(dato.getKey());
+                    productoModelList.add(producto);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });*/
+
+
 
     }
 
@@ -81,12 +127,7 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        String strtext = getArguments().getString("nombre");
-
         View view = inflater.inflate(R.layout.fragment_detalle_producto, container, false);
-        consultaProducto=refProductos.orderByChild("nombre").equalTo(strtext);
-
-        Log.e("DetalleProducto",strtext);
 
         inicializar(view);
 
@@ -160,6 +201,7 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
         Log.e("productoSeleccionado: ",productoModel.getNombre() );
     }
 
+
     public void inicializar(View v){
         txtPrecio=v.findViewById(R.id.precio);
         txtDescripcion=v.findViewById(R.id.descripcion);
@@ -180,11 +222,7 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
                 txtPrecio.setText("$"+productoPrinci.getPrecio());
                 txtDescripcion.setText(productoPrinci.getDetalle());
                 String txtEnlaceImg = productoPrinci.getImagen();
-                String categoria = productoPrinci.getCategoria();
 
-                Log.e("Categoria", categoria);
-
-                //consultaCategoria = refProductos.orderByChild("categoria").equalTo(categoria);
                 Picasso.get().load(txtEnlaceImg).into(imagenPrincipal);
 
             }
@@ -195,22 +233,7 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
             }
         });
 
-        consultaCategoria.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dato: snapshot.getChildren()) {
 
-                    Producto producto = dato.getValue(Producto.class);
-                    producto.setKey(dato.getKey());
-                    productoModelList.add(producto);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
     }
 }
