@@ -11,17 +11,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.udb.edu.joyeria_commerce.datos.Producto;
 import com.udb.edu.joyeria_commerce.datos.ProductoModel;
 
 import java.util.List;
 
 public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ProductoAdapterVh> implements Filterable {
 
-    private List<ProductoModel> productoModelList;
+    private List<Producto> productoModelList;
     private Context context;
     private ProductoSeleccionado productoSeleccionado;
 
-    public ProductoAdapter(List<ProductoModel> productoModelList, ProductoSeleccionado productoSeleccionado){
+    public ProductoAdapter(List<Producto> productoModelList, ProductoSeleccionado productoSeleccionado){
         this.productoModelList=productoModelList;
         this.productoSeleccionado=productoSeleccionado;
     }
@@ -41,10 +42,10 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.Produc
 
     @Override
     public void onBindViewHolder(@NonNull ProductoAdapter.ProductoAdapterVh holder, int position) {
-        ProductoModel productoModel=productoModelList.get(position);
+        Producto productoModel=productoModelList.get(position);
 
-        String title=productoModel.getProductoTitulo();
-        String price=productoModel.getPrecio();
+        String title=productoModel.getNombre();
+        Double price=productoModel.getPrecio();
 
         holder.tvTitle.setText(title);
         holder.tvPrecio.setText("$"+price);
@@ -56,7 +57,7 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.Produc
     }
 
     public interface ProductoSeleccionado{
-        void productoSeleccionado(ProductoModel productoModel);
+        void productoSeleccionado(Producto productoModel);
     }
 
     public class ProductoAdapterVh extends RecyclerView.ViewHolder{

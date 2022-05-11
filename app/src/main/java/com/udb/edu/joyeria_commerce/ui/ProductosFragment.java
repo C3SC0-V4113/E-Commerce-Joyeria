@@ -83,8 +83,10 @@ public class ProductosFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-
+                Bundle bundle = new Bundle();
+                bundle.putString("nombre", productos.get(position).getNombre());
                 DetalleProductoFragment detalle = new DetalleProductoFragment();
+                detalle.setArguments(bundle);
                 getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
 
             }
