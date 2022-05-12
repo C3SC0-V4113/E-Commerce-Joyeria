@@ -2,6 +2,7 @@ package com.udb.edu.joyeria_commerce;
 
 import android.content.Context;
 import android.net.Uri;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,11 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 import com.udb.edu.joyeria_commerce.datos.Producto;
 import com.udb.edu.joyeria_commerce.datos.ProductoModel;
+import com.udb.edu.joyeria_commerce.ui.DetalleProductoFragment;
 
 import java.util.List;
 
@@ -56,6 +60,18 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.Produc
         holder.tvTitle.setText(title);
         holder.tvPrecio.setText("$"+price);
         Picasso.get().load(urlimg).into(holder.imgVista);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*FragmentManager manager = context.getSupportFragmentManager();
+                Bundle bundle = new Bundle();
+                bundle.putString("nombre", productoModel.getNombre());
+                bundle.putString("categoria",productoModel.getCategoria());
+                DetalleProductoFragment detalle = new DetalleProductoFragment();
+                detalle.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();*/
+            }
+        });
     }
 
     @Override

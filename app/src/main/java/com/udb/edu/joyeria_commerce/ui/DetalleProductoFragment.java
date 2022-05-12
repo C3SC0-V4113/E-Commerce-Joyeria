@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -102,25 +103,6 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
 
         Log.e("consultaCategoria: ", consultaCategoria.toString());
 
-        /*consultaCategoria.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dato: snapshot.getChildren()) {
-                    Log.e("onDataChange: ","Probando" );
-                    Producto producto = dato.getValue(Producto.class);
-                    producto.setKey(dato.getKey());
-                    productoModelList.add(producto);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/
-
-
-
     }
 
     @Override
@@ -132,35 +114,30 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
         inicializar(view);
 
         rcl_tallas = view.findViewById(R.id.rclview_tallas);
+        rcl_colores = view.findViewById(R.id.rclview_colores);
+        rcl_recomendados = view.findViewById(R.id.rclview_recomendados);
 
-        rcl_colores=view.findViewById(R.id.rclview_colores);
-        rcl_recomendados=view.findViewById(R.id.rclview_recomendados);
-
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
 
-        LinearLayoutManager linearLayoutManager2=new LinearLayoutManager(getContext());
+        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(getContext());
         linearLayoutManager2.setOrientation(LinearLayoutManager.HORIZONTAL);
 
-        LinearLayoutManager linearLayoutManager3=new LinearLayoutManager(getContext());
+        LinearLayoutManager linearLayoutManager3 = new LinearLayoutManager(getContext());
         linearLayoutManager3.setOrientation(LinearLayoutManager.HORIZONTAL);
 
-        for (String s:tallas) {
-            TallasModel tallasModel=new TallasModel(s);
+        for (String s : tallas) {
+            TallasModel tallasModel = new TallasModel(s);
 
             tallasModelList.add(tallasModel);
         }
 
-        for (String s:colores){
-            ColorModel colorModel=new ColorModel(s);
+        for (String s : colores) {
+            ColorModel colorModel = new ColorModel(s);
 
             colorModelList.add(colorModel);
         }
 
-        /*productoModelList.add(new ProductoModel("Anillo corazón esmeralda",183.0));
-        productoModelList.add(new ProductoModel("Anillo azul zafiro",228.0));
-        productoModelList.add(new ProductoModel("Anillo gota rubí",190.0));
-        productoModelList.add(new ProductoModel("Anillo de oro con opalos incrustados",250.0));*/
 
         rcl_tallas.setLayoutManager(linearLayoutManager);
         rcl_tallas.addItemDecoration(new DividerItemDecoration(getContext(),DividerItemDecoration.VERTICAL));
@@ -173,13 +150,11 @@ public class DetalleProductoFragment extends Fragment implements TallasAdapter.T
 
         tallasAdapter=new TallasAdapter(tallasModelList,this);
         coloresAdapter=new ColorAdapter(colorModelList,this);
-        Log.e("Productos relacionado", productoModelList.toString() );
         productoAdapter=new ProductoAdapter(productoModelList,this);
 
         rcl_tallas.setAdapter(tallasAdapter);
         rcl_colores.setAdapter(coloresAdapter);
         rcl_recomendados.setAdapter(productoAdapter);
-
 
 
         // Inflate the layout for this fragment

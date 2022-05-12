@@ -62,16 +62,6 @@
                 tools:srcCompat="@mipmap/icono_busqueda" />
 
             <ImageButton
-                android:id="@+id/btnFavoritos"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="#CCBEE3"
-                android:layout_marginTop="15dp"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/icono_corazon"
-                tools:srcCompat="@mipmap/icono_corazon" />
-
-            <ImageButton
                 android:id="@+id/btnCompra"
                 android:layout_width="35dp"
                 android:layout_height="35dp"

@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.udb.edu.joyeria_commerce.datos.Producto;
+import com.udb.edu.joyeria_commerce.ui.DetalleProductoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -239,10 +240,16 @@ public class FiltroFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l)
             {
-                Joyas selectJoyas = (Joyas) (listView.getItemAtPosition(position));
-                Intent showDetail = new Intent(getContext(), DetailActivity.class);
+                Producto selectJoyas = (Producto) (listView.getItemAtPosition(position));
+                /*Intent showDetail = new Intent(getContext(), DetailActivity.class);
                 showDetail.putExtra("id",selectJoyas.getId());
-                startActivity(showDetail);
+                startActivity(showDetail);*/
+                Bundle bundle = new Bundle();
+                bundle.putString("nombre", selectJoyas.getNombre());
+                bundle.putString("categoria",selectJoyas.getCategoria());
+                DetalleProductoFragment detalle = new DetalleProductoFragment();
+                detalle.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
             }
         });
 
