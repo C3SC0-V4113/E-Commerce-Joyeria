@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "529509772299",
+    "firebase_url": "https://joyeria-diamond-default-rtdb.firebaseio.com",
+    "project_id": "joyeria-diamond",
+    "storage_bucket": "joyeria-diamond.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529509772299:android:c85257af8e052dfd1a6b0e",
+        "android_client_info": {
+          "package_name": "com.udb.edu.joyeria_commerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529509772299-45l10ittmi4aeu2sfsi4hckrjifoa1d6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udb.edu.joyeria_commerce",
+            "certificate_hash": "f184800731d3de42a99128f1b3fd281c973ba549"
+          }
+        },
+        {
+          "client_id": "529509772299-5695v1fsp8d0b2atiku9reji2njopjfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udb.edu.joyeria_commerce",
+            "certificate_hash": "e33bb31b9482f4a7fb01c149cf4a21e6af42082e"
+          }
+        },
+        {
+          "client_id": "529509772299-igug2kba94no8sebp06iisancvoruvvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.udb.edu.joyeria_commerce",
+            "certificate_hash": "2d9314c6e08d0972a8db62a296242d06e3229766"
+          }
+        },
+        {
+          "client_id": "529509772299-ail7ucv6r2kfb4f1ceecqqtvmrnn8aje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSTIN6dQxuZYkPow2-aFKRD-eYj-0-5u0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529509772299-ail7ucv6r2kfb4f1ceecqqtvmrnn8aje.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

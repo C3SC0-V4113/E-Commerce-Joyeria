@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:showIn="navigation_view">
+
+    <group
+        
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/productosFragment"
+            android:icon="@drawable/novedades"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/pendientesFragment"
+            android:icon="@drawable/earings"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/anillosFragment"
+            android:icon="@drawable/anillos"
+            android:title="@string/menu_slideshow" />
+        <item
+
+            android:id="@+id/pulserasFragment"
+            android:icon="@drawable/pulseras"
+            android:title="@string/menu_pulseras" />
+        <item
+            android:id="@+id/charmsFragment"
+            android:icon="@drawable/charms"
+            android:title="@string/menu_charms" />
+        <item
+            android:id="@+id/collaresFragment2"
+            android:icon="@drawable/collares"
+            android:title="@string/menu_collares" />
+        <item
+            android:id="@+id/regalosFragment2"
+            android:icon="@drawable/regalos"
+            android:title="@string/menu_ideas" />
+        <item
+            android:id="@+id/pagoFragment"
+            android:icon="@drawable/card"
+            android:title="Formulario de Pago" />
+        <item
+            android:id="@+id/cuentaFragment"
+            android:icon="@drawable/cuenta"
+            android:title="@string/menu_cuenta" />
+    </group>
+</menu>

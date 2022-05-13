@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9E81B3"
+    tools:context=".ui.CharmsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#9E81B3" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/charms"
+            android:layout_marginTop="15dp"
+            app:tint="#CCBEE3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:text="Charms" />
+
+        <ListView
+            android:id="@+id/ListaProductos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="#CCBEE3"
+            android:orientation="horizontal">
+
+
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="#CCBEE3"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/icono_home"
+                tools:srcCompat="@mipmap/icono_home" />
+
+            <ImageButton
+                android:id="@+id/btnBusqueda"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="#CCBEE3"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/icono_busqueda"
+                tools:srcCompat="@mipmap/icono_busqueda" />
+
+            <ImageButton
+                android:id="@+id/btnCompra"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="#CCBEE3"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/icono_canasta"
+                tools:srcCompat="@mipmap/icono_canasta" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
