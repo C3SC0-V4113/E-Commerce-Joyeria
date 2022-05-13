@@ -17,6 +17,7 @@
     <string name="menu_charms">Charms</string>
     <string name="menu_collares">Collares y Colgantes</string>
     <string name="menu_ideas">Ideas de regalos</string>
+    <string name="menu_pago">Formulario de Pago</string>
     <string name="menu_cuenta">Mi Cuenta</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

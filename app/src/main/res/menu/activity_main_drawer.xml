@@ -38,6 +38,10 @@
             android:icon="@drawable/regalos"
             android:title="@string/menu_ideas" />
         <item
+            android:id="@+id/pagoFragment"
+            android:icon="@drawable/regalos"
+            android:title="@string/menu_pago" />
+        <item
             android:id="@+id/cuentaFragment"
             android:icon="@drawable/cuenta"
             android:title="@string/menu_cuenta" />

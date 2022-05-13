@@ -49,7 +49,12 @@ public class CuentaFragment extends Fragment {
         nombre=settings.getString("email","");
         View v = inflater.inflate(R.layout.fragment_cuenta, container, false);
         correo=v.findViewById(R.id.txtadd);
-        correo.setText(nombre);
+        correo.setText(getUsuario(nombre));
         return v;
+    }
+
+    public String getUsuario(String correo){
+        String[] textoSeparado = correo.split("@");
+        return textoSeparado[0];
     }
 }
