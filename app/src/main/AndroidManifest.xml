@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrawerNavigation">
         <activity
+            android:name=".DetalleRegistroCompraFragment"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroComprasFragment"
+            android:exported="false" />
+        <activity
             android:name=".CarritoFragment"
             android:exported="false" />
         <activity

@@ -2,7 +2,6 @@ package com.udb.edu.joyeria_commerce.ui;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
 
@@ -23,25 +22,26 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+import com.udb.edu.joyeria_commerce.FiltroFragment;
 import com.udb.edu.joyeria_commerce.R;
-import com.udb.edu.joyeria_commerce.datos.ContadorModel;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class DetalleJoyaFragment extends Fragment {
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
-    public DatabaseReference refContador = database.getReference("contador");
+    public DatabaseReference refContador = database.getReference("contadores");
     public DatabaseReference refCompras = database.getReference();
 
 
     String nombreProducto, precioProducto, detalleProducto, imagenProducto;
+    double precioProd;
 
     TextView tvNombreProducto, tvPrecioProducto, tvDetalleProducto;
     ImageView ivImagenProducto;
     Button btnAgregarCarrito;
 
-    String correo;
+    String correo, correoU;
     SharedPreferences settings;
 
     public DetalleJoyaFragment(){
@@ -59,6 +59,9 @@ public class DetalleJoyaFragment extends Fragment {
                 precioProducto = bundle.getString("precioProducto");
                 detalleProducto = bundle.getString("detalleProducto");
                 imagenProducto = bundle.getString("imagenProducto");
+
+                //Conversión del precio recibido en string a double
+                precioProd = Double.parseDouble(precioProducto);
 
                 tvNombreProducto.setText("" + nombreProducto);
                 tvPrecioProducto.setText("$" + precioProducto);
@@ -84,6 +87,8 @@ public class DetalleJoyaFragment extends Fragment {
         //Obtención de correo del usuario
         settings = getContext().getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
         correo=settings.getString("email","");
+        //Elimnando puntos en el correo
+        correoU = correo.replace(".","");
 
         // Relaciones con id del fragment
         tvNombreProducto = view.findViewById(R.id.tvNombreProducto);
@@ -102,12 +107,11 @@ public class DetalleJoyaFragment extends Fragment {
                 Map<String, Object> datoCompra = new HashMap<>();
 
                 datoCompra.put("nombre", nombreProducto);
-                datoCompra.put("precio", precioProducto);
+                datoCompra.put("precio", precioProd);
                 datoCompra.put("detalle", detalleProducto);
                 datoCompra.put("imagen", imagenProducto);
 
-
-                refContador.child("numero").addValueEventListener(new ValueEventListener() {
+                refContador.child("" + correoU).child("numero").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dato) {
 
@@ -119,16 +123,19 @@ public class DetalleJoyaFragment extends Fragment {
                             int numero = Integer.parseInt(dato.getValue().toString());
 
                             //Ingresamos los datos a la lista de compra
-                            refCompras.child("compras").child("compra" + numero).push().setValue(datoCompra);
+                            refCompras.child("compras").child(""+correoU).child("compra" + numero).push().setValue(datoCompra);
 
                             Toast.makeText(getContext(),
                                     "Se ha agregado el producto al carrito",Toast.LENGTH_SHORT).show();
+
+                            ProductosFragment pantallaProductos = new ProductosFragment();
+                            getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,pantallaProductos).commit();
 
                         }
                         else {
                             // Si el nodo del contador del usuario no ha sido creado se procede a crearlo (la primera compra del usuario)
                             int contador = 1;
-                            refContador.child("numero").setValue(contador);
+                            refContador.child(""+correoU).child("numero").setValue(contador);
 
 //                            //y se agrega el producto a la lista de compra
 //                            refCompras.child("compras").child("correo1").child("compra" + contador).push().setValue(datoCompra);
@@ -143,6 +150,44 @@ public class DetalleJoyaFragment extends Fragment {
 
                     }
                 });
+
+
+//                refContador.child("numero").addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dato) {
+//
+//                        if(dato.exists())
+//                        {
+//                            //Si el nodo ha sido creado se agrega el producto a la lista
+//
+//                            //Obtenemos el valor del contador de ese usuario (el número de compras que va realizado)
+//                            int numero = Integer.parseInt(dato.getValue().toString());
+//
+//                            //Ingresamos los datos a la lista de compra
+//                            refCompras.child("compras").child("compra" + numero).push().setValue(datoCompra);
+//
+//                            Toast.makeText(getContext(),
+//                                    "Se ha agregado el producto al carrito",Toast.LENGTH_SHORT).show();
+//
+//                        }
+//                        else {
+//                            // Si el nodo del contador del usuario no ha sido creado se procede a crearlo (la primera compra del usuario)
+//                            int contador = 1;
+//                            refContador.child("numero").setValue(contador);
+//
+////                            //y se agrega el producto a la lista de compra
+////                            refCompras.child("compras").child("correo1").child("compra" + contador).push().setValue(datoCompra);
+////
+////                            Toast.makeText(getContext(),
+////                                    "Se ha agregado el producto al carrito",Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                    }
+//                });
 
 //                Toast.makeText(getContext(),
 //                        "Hello! " + imagenProducto,Toast.LENGTH_SHORT).show();

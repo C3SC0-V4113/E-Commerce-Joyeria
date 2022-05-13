@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9E81B3"
-    tools:context=".ui.RegalosFragment">
+    android:background="#343335"
+    tools:context=".RegistroComprasFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#9E81B3"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            app:srcCompat="@drawable/regalos"
-            android:layout_marginTop="15dp"
-            app:tint="#CCBEE3" />
-
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
             android:layout_marginBottom="20dp"
-            android:text="@string/menu_ideas" />
+            android:layout_marginTop="15dp"
+            android:text="Historial de compras"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:drawableTint="#CCBEE3"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
         <ListView
-            android:id="@+id/ListaRegalos"
+            android:id="@+id/ListaRegistroCompras"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:scrollbars="vertical" />
 
@@ -50,7 +46,6 @@
                 android:layout_weight="1"
                 android:background="#CCBEE3"
                 app:srcCompat="@mipmap/icono_home"
-                app:tint="#8458A5"
                 tools:srcCompat="@mipmap/icono_home" />
 
             <ImageButton
@@ -59,7 +54,6 @@
                 android:layout_height="35dp"
                 android:background="#CCBEE3"
                 android:layout_marginTop="15dp"
-
                 android:layout_weight="1"
                 app:srcCompat="@mipmap/icono_busqueda"
                 tools:srcCompat="@mipmap/icono_busqueda" />
@@ -81,11 +75,11 @@
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
                 android:background="#CCBEE3"
+                app:tint="#8458A5"
                 app:srcCompat="@mipmap/icono_canasta"
                 tools:srcCompat="@mipmap/icono_canasta" />
 
         </LinearLayout>
-
     </LinearLayout>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

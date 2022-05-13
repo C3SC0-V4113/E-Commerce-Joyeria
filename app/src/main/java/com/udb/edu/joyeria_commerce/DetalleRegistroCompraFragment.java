@@ -1,62 +1,75 @@
-package com.udb.edu.joyeria_commerce.ui;
-
-import android.app.Activity;
-import android.os.Bundle;
+package com.udb.edu.joyeria_commerce;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.udb.edu.joyeria_commerce.AdaptadorProducto;
-import com.udb.edu.joyeria_commerce.CarritoFragment;
-import com.udb.edu.joyeria_commerce.FiltroFragment;
-import com.udb.edu.joyeria_commerce.R;
-import com.udb.edu.joyeria_commerce.RegistroComprasFragment;
 import com.udb.edu.joyeria_commerce.datos.Producto;
+import com.udb.edu.joyeria_commerce.ui.ProductosFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PulserasFragment extends Fragment {
-
+public class DetalleRegistroCompraFragment extends Fragment {
     public static FirebaseDatabase database = FirebaseDatabase.getInstance();
-    public static DatabaseReference refProductos = database.getReference("productos");
-
-    Query consultaPulseras = refProductos.orderByChild("categoria").equalTo("Pulseras");
+    public DatabaseReference refProductosCompras = database.getReference("compras");
 
     private List<Producto> productos;
-    private ListView listaPulseras;
+    private ListView listaProductos;
 
-    ImageButton btnBusqueda, btnCarrito, btnRegistroCompras;
+    double totalCompra = 0; //Cálculo total de la compra
+    ImageButton btnBusqueda, btnCarrito, btnRegistroCompras, btnHome;
 
-    public PulserasFragment() {
-        // Required empty public constructor
+    String idRegistro, totalRegistro, num;
+
+
+    String correo, correoU;
+    SharedPreferences settings;
+
+    public DetalleRegistroCompraFragment(){
+
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        inicializar();
+
+        getParentFragmentManager().setFragmentResultListener("key", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+                idRegistro = bundle.getString("idRegistro");
+                totalRegistro = bundle.getString("totalRegistro");
+
+                num = idRegistro;
+
+            }
+        });
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View vista=inflater.inflate(R.layout.fragment_pulseras, container, false);
+        View vista=inflater.inflate(R.layout.fragment_detalle_registro_compra, container, false);
 
 
         // Cambio a la vista de búsqueda (filtros)
@@ -89,40 +102,33 @@ public class PulserasFragment extends Fragment {
             }
         });
 
+        //Cambio a la vista de registro de compras
+        btnHome = vista.findViewById(R.id.btnHome);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ProductosFragment home = new ProductosFragment();
+                getParentFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,home).commit();
+            }
+        });
+
         return vista;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        listaPulseras = view.findViewById(R.id.ListaProductos);
-        listaPulseras.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
 
-                //Paso de datos del producto seleccionado a fragment_detalle_joya
-                Bundle bundle = new Bundle();
-                bundle.putString("nombreProducto", productos.get(position).getNombre());
-                bundle.putString("precioProducto", productos.get(position).getPrecio().toString());
-                bundle.putString("detalleProducto", productos.get(position).getDetalle());
-                bundle.putString("imagenProducto", productos.get(position).getImagen());
-                getParentFragmentManager().setFragmentResult("key", bundle);
+        //Obtención de correo del usuario
+        settings = getContext().getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+        correo=settings.getString("email","");
+        //Elimnando puntos en el correo
+        correoU = correo.replace(".","");
 
-                //Cambio de vista a fragment_detalle_joya
-                DetalleJoyaFragment detalle = new DetalleJoyaFragment();
-                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
-
-            }
-        });
-    }
-
-    public void inicializar(){
-        //listaProductos = findViewById(R.id.ListaProductos);
-
-        // Mostrar lista de productos ingresados en la base
+        listaProductos = view.findViewById(R.id.ListaProductos);
         productos = new ArrayList<>();
 
-        consultaPulseras.addValueEventListener(new ValueEventListener() {
+        refProductosCompras.child(""+correoU).child("compra"+num).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 productos.removeAll(productos);
@@ -134,7 +140,11 @@ public class PulserasFragment extends Fragment {
                 }
 
                 AdaptadorProducto adapter = new AdaptadorProducto((Activity) getContext(), productos);
-                listaPulseras.setAdapter(adapter);
+                listaProductos.setAdapter(adapter);
+
+                Toast.makeText(getContext(),
+                        "Hello " + num + correoU,Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
@@ -143,4 +153,5 @@ public class PulserasFragment extends Fragment {
             }
         });
     }
+
 }

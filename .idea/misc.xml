@@ -3,16 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_carrito.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_anillos.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_carrito.xml" value="0.2" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_charms.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_collares.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_detalle_joya.xml" value="0.1989795918367347" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_detalle_producto.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_detalle_regalo.xml" value="0.1638888888888889" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_detalle_registro_compra.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_filtro.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_pago.xml" value="0.33" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_pendientes.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_productos.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_pulseras.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_regalos.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_registro_compras.xml" value="0.20416666666666666" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/productos_layout.xml" value="0.25" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/regalos_layout.xml" value="0.33" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/registro_layout.xml" value="0.22" />
         <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.202" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/drawable-v24/ic_launcher_foreground_og.xml" value="0.202" />
