@@ -39,7 +39,7 @@ public class AdaptadorRegistros extends ArrayAdapter<RegistroModel> {
         TextView tvNombreRegistro = rowview.findViewById(R.id.tvNombreRegistro);
         TextView tvTotalRegistro = rowview.findViewById(R.id.tvTotalRegistro);
 
-        tvNombreRegistro.setText("Mi compra " + registros.get(position).getId());
+        tvNombreRegistro.setText("Pedido " + registros.get(position).getId());
         tvTotalRegistro.setText("$" + registros.get(position).getTotal());
 
         return rowview;
