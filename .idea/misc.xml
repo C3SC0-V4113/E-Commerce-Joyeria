@@ -3,6 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_anillos.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_carrito.xml" value="0.2" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_charms.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_collares.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_detalle_joya.xml" value="0.1989795918367347" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_detalle_producto.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_detalle_regalo.xml" value="0.1638888888888889" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_detalle_registro_compra.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_filtro.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_pago.xml" value="0.33" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_pendientes.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_productos.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_pulseras.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_regalos.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/fragment_registro_compras.xml" value="0.20416666666666666" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/productos_layout.xml" value="0.25" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/regalos_layout.xml" value="0.33" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/layout/registro_layout.xml" value="0.22" />
+        <entry key="..\:/DSMLab/proyect/E-Commerce-Joyeria-Francisco/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.202" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/drawable-v24/ic_launcher_foreground_og.xml" value="0.202" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/drawable/btn_bg_design.xml" value="0.1215" />
@@ -17,22 +36,51 @@
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_producto_detalle.xml" value="0.2267379679144385" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/app_bar_main.xml" value="0.11041666666666666" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/content_main.xml" value="0.11041666666666666" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/content_main.xml" value="0.16799999999999998" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_anillos.xml" value="0.25" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_detalle_producto.xml" value="0.2" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_charms.xml" value="0.11041666666666666" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_collares.xml" value="0.11041666666666666" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_cuenta.xml" value="0.25" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_detalle_producto.xml" value="0.16799999999999998" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_pago.xml" value="0.25" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_pendientes.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_productos.xml" value="0.2" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_pulseras.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_recycler_view_colores.xml" value="0.1" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_recycler_view_productos.xml" value="0.176" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_recycler_view_tallas.xml" value="0.4" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_regalos.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/joyas_cell.xml" value="0.1" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/productos_layout.xml" value="0.11041666666666666" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/menu/activity_main_drawer.xml" value="0.11041666666666666" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/menu/activity_main_drawer.xml" value="0.4" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/menu/main.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.121" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round2.png.xml" value="0.121" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/font/.xml" value="0.284375" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/activity_detail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/activity_filtro.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/activity_registro.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/app_bar_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_anillos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_collares.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_cuenta.xml" value="0.25" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_detalle_producto.xml" value="0.16203703703703703" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_detalle_regalo.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_filtro.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_pago.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_pendientes.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_productos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_recycler_view_productos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/fragment_regalos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/joyas_cell.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/nav_header_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/productos_layout.xml" value="0.25" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/layout/regalos_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/menu/activity_main_drawer.xml" value="0.23809523809523808" />
+        <entry key="..\:/Users/crist/Desktop/ProyectoMoviles/app/src/main/res/menu/main.xml" value="0.16203703703703703" />
       </map>
     </option>
   </component>

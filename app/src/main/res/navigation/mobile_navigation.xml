@@ -29,7 +29,38 @@
     <fragment
         android:id="@+id/pulserasFragment"
         android:name="com.udb.edu.joyeria_commerce.ui.PulserasFragment"
-        android:label="fragment_pulseras"
+        android:label="@string/nav_header_title4"
         tools:layout="@layout/fragment_pulseras" />
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="com.udb.edu.joyeria_commerce.PagoFragment"
+        android:label="fragment_pago"
+        tools:layout="@layout/fragment_pago" />
+    <fragment
+        android:id="@+id/cuentaFragment"
+        android:name="com.udb.edu.joyeria_commerce.CuentaFragment"
+        android:label="fragment_cuenta"
+        tools:layout="@layout/fragment_cuenta" />
+
+    <fragment
+        android:id="@+id/charmsFragment"
+        android:name="com.udb.edu.joyeria_commerce.ui.CharmsFragment"
+
+        tools:layout="@layout/fragment_charms" />
+    <fragment
+        android:id="@+id/regalosFragment2"
+        android:name="com.udb.edu.joyeria_commerce.ui.RegalosFragment"
+        android:label="fragment_regalos"
+        tools:layout="@layout/fragment_regalos" />
+    <fragment
+        android:id="@+id/collaresFragment2"
+        android:name="com.udb.edu.joyeria_commerce.ui.CollaresFragment"
+        android:label="fragment_collares"
+        tools:layout="@layout/fragment_collares" />
+    <fragment
+        android:id="@+id/filtroFragment"
+        android:name="com.udb.edu.joyeria_commerce.FiltroFragment"
+        android:label="fragment_filtro"
+        tools:layout="@layout/fragment_filtro" />
 
 </navigation>

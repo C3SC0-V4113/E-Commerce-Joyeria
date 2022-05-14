@@ -77,8 +77,8 @@ public class Filtro extends AppCompatActivity
                         }
                     }
                 }
-                JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, filteredJoyas);
-                listView.setAdapter(adapter);
+                //JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, filteredJoyas);
+                //listView.setAdapter(adapter);
 
                 return false;
             }
@@ -122,8 +122,8 @@ public class Filtro extends AppCompatActivity
     {
         listView = (ListView) findViewById(R.id.joyasListView);
 
-        JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, joyasList);
-        listView.setAdapter(adapter);
+        //JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, joyasList);
+        //listView.setAdapter(adapter);
     }
 
     private void setUpOnclickListener()
@@ -167,8 +167,8 @@ public class Filtro extends AppCompatActivity
             }
         }
 
-        JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, filteredJoyas);
-        listView.setAdapter(adapter);
+        //JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, filteredJoyas);
+        //listView.setAdapter(adapter);
     }
 
 
@@ -178,8 +178,8 @@ public class Filtro extends AppCompatActivity
     {
         selectedFilter = "todos";
 
-        JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, joyasList);
-        listView.setAdapter(adapter);
+        //JoyasAdapter adapter = new JoyasAdapter(getApplicationContext(), 0, joyasList);
+        //listView.setAdapter(adapter);
     }
 
     public void pulseraFilterTapped(View view)

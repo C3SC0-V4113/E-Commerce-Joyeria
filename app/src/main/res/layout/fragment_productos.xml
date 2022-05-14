@@ -29,10 +29,11 @@
             android:id="@+id/btnHome"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:background="#CCBEE3"
             android:layout_marginTop="15dp"
             android:layout_weight="1"
+            android:background="#CCBEE3"
             app:srcCompat="@mipmap/icono_home"
+            app:tint="#8458A5"
             tools:srcCompat="@mipmap/icono_home" />
 
         <ImageButton
@@ -41,27 +42,28 @@
             android:layout_height="35dp"
             android:background="#CCBEE3"
             android:layout_marginTop="15dp"
+
             android:layout_weight="1"
             app:srcCompat="@mipmap/icono_busqueda"
             tools:srcCompat="@mipmap/icono_busqueda" />
 
         <ImageButton
-            android:id="@+id/btnFavoritos"
+            android:id="@+id/btnCarrito"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:background="#CCBEE3"
             android:layout_marginTop="15dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/icono_corazon"
-            tools:srcCompat="@mipmap/icono_corazon" />
+            android:background="#CCBEE3"
+            app:srcCompat="@mipmap/carrito"
+            tools:srcCompat="@mipmap/carrito" />
 
         <ImageButton
-            android:id="@+id/btnCompra"
+            android:id="@+id/btnRegistroCompras"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:background="#CCBEE3"
             android:layout_marginTop="15dp"
             android:layout_weight="1"
+            android:background="#CCBEE3"
             app:srcCompat="@mipmap/icono_canasta"
             tools:srcCompat="@mipmap/icono_canasta" />
 
