@@ -1,21 +1,21 @@
-# E-Commerce-Joyería (AVANCE DEL 100%)
+# E-Commerce-Joyería (AVANCE DEL 100%) 💍
 Creación de una aplicación móvil de e-commerce para una joyería. Proyecto desarrollado en Android Studio [Java] correspondiente a la materia Diseño de Software para Móviles [DSM] impartida durante el ciclo 01-2022.
 
-### Prerrequisitos
+### Prerrequisitos 📝
 ------------
 - [Android Studio](https://developer.android.com/studio "Android Studio")
 - [Java Development Kit](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html "Java Development Kit")
 - [git](https://git-scm.com/ "git")
 - Entorno de Desarrollo Móvil en Java configurado
 
-### Instalación
+### Instalación 💻
 ------------
-1. Seleccionar un sitio en la maquina para descargar el repositorio
+1. Seleccionar un sitio en la máquina para descargar el repositorio
 2. Obtenemos su directorio y en gitbash escribimos `cd [raíz_directorio]` o si tenemos la opción, click derecho en la carpeta y seleccionamos **Git Bash Here**
 3. Escribimos en la terminal `git clone https://github.com/C3SC0-V4113/E-Commerce-Joyeria.git`
 Adicionalmente, si tenemos una llave SSH en nuestro ordenador y reconocida por GitHub podemos usar `git clone git@github.com:C3SC0-V4113/E-Commerce-Joyeria.git`
 
-### Colaboradores
+### Colaboradores ✒️
 ------------
 - [Pamela Giselle Chipagua Hernández](https://github.com/Giselle-Ch "Pamela Giselle Chipagua Hernández") - Programación, diseño, lógica y manuales
 - [Rodrigo Enrique Flores Velásquez](https://github.com/refv-21 "Rodrigo Enrique Flores Velásquez") - Programación, diseño, lógica y manuales
@@ -23,7 +23,7 @@ Adicionalmente, si tenemos una llave SSH en nuestro ordenador y reconocida por G
 - [Ebony Gabriela Peña Gómez](https://github.com/Bonny0110 "Ebony Gabriela Peña Gómez") - Programación, diseño, lógica y manuales
 - [Francisco José Valle Cornejo](https://github.com/C3SC0-V4113 "Francisco José Valle Cornejo") - Programación, diseño, lógica y manuales
 
-### Licencia
+### Licencia 🔐
 ------------
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licencia Creative Commons Attribution 4.0 Internacional</a>.
 
@@ -48,11 +48,11 @@ para cualquier fin, incluso comercial.
 ### Enlaces de interés (Fase 2)
 ------------
 - [Espacio de trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
-- [Manual de Usuario y Técnico](https://drive.google.com/drive/folders/10OFg_1oHWp5pbpFbAA2WQK0czqS-fyt7?usp=sharing)
-- [Enlace de Video Demostrativo Fase 2](https://youtu.be/Ly1GMK7rtfw "Enlace de Video Demostrativo Fase 2")
+- [Manual de usuario y técnico](https://drive.google.com/drive/folders/10OFg_1oHWp5pbpFbAA2WQK0czqS-fyt7?usp=sharing)
+- [Enlace de video demostrativo - fase 2](https://youtu.be/Ly1GMK7rtfw "Enlace de Video Demostrativo Fase 2")
 
 ### Enlaces de interés (Fase 3)
 ------------
 - [Espacio de trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
-- [Manual de Usuario y Técnico](https://drive.google.com/drive/folders/1-uLTK-Ic-lwakkjnA5WseSU_th0-8d7y?usp=sharing)
-- [Enlace de Video Demostrativo Fase 3](https://youtu.be/rkxOL2uu0Ws "Enlace de Video Demostrativo Fase 3")
+- [Manual de usuario y técnico](https://drive.google.com/drive/folders/1IiQ1HcTF6zCjC3DXC40Fg__Id0nI1CWu?usp=sharing)
+- [Enlace de video demostrativo - fase 3](https://youtu.be/rkxOL2uu0Ws "Enlace de Video Demostrativo Fase 3")
