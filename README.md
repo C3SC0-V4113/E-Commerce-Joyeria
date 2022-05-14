@@ -1,4 +1,4 @@
-# E-Commerce-Joyería (AVANCE DEL 100%) 💍
+# e-commerce Joyería Diamond (AVANCE DEL 100%) 💍
 Creación de una aplicación móvil de e-commerce para una joyería. Proyecto desarrollado en Android Studio [Java] correspondiente a la materia Diseño de Software para Móviles [DSM] impartida durante el ciclo 01-2022.
 
 ### Prerrequisitos 📝
