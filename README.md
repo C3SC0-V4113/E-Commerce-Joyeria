@@ -49,4 +49,10 @@ para cualquier fin, incluso comercial.
 ------------
 - [Espacio de trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
 - [Manual de Usuario y Técnico](https://drive.google.com/drive/folders/10OFg_1oHWp5pbpFbAA2WQK0czqS-fyt7?usp=sharing)
-- [Enlace de Video Demostrativo](https://youtu.be/Ly1GMK7rtfw "Enlace de Video Demostrativo")
+- [Enlace de Video Demostrativo Fase 2](https://youtu.be/Ly1GMK7rtfw "Enlace de Video Demostrativo Fase 2")
+
+### Enlaces de interés (Fase 3)
+------------
+- [Espacio de trabajo en Notion](https://general-group-0dd.notion.site/Proyecto-de-c-tedra-DSM-dfecc7ba6121485d85ec6281b702c3c4 "Espacio de Trabajo en Notion")
+- [Manual de Usuario y Técnico](https://drive.google.com/drive/folders/1-uLTK-Ic-lwakkjnA5WseSU_th0-8d7y?usp=sharing)
+- [Enlace de Video Demostrativo Fase 3](https://youtu.be/rkxOL2uu0Ws "Enlace de Video Demostrativo Fase 3")

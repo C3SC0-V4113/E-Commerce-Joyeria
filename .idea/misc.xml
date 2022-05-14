@@ -32,16 +32,18 @@
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/drawable/talla_drawable.xml" value="0.121" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_filtro.xml" value="0.16799999999999998" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_login.xml" value="0.10416666666666667" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_login.xml" value="0.16" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/activity_producto_detalle.xml" value="0.2267379679144385" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/app_bar_main.xml" value="0.11041666666666666" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/app_bar_main.xml" value="0.144" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/content_main.xml" value="0.16799999999999998" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_anillos.xml" value="0.25" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_anillos.xml" value="0.136" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_charms.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_collares.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_cuenta.xml" value="0.25" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_detalle_joya.xml" value="0.2" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_detalle_producto.xml" value="0.16799999999999998" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_detalle_registro_compra.xml" value="0.1015625" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_pago.xml" value="0.25" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_pendientes.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_productos.xml" value="0.2" />
@@ -51,9 +53,9 @@
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_recycler_view_tallas.xml" value="0.4" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/fragment_regalos.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/joyas_cell.xml" value="0.1" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/nav_header_main.xml" value="0.152" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/layout/productos_layout.xml" value="0.11041666666666666" />
-        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/menu/activity_main_drawer.xml" value="0.4" />
+        <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/menu/activity_main_drawer.xml" value="0.176" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/menu/main.xml" value="0.11041666666666666" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.121" />
         <entry key="..\:/Repositorios/E-Commerce-Joyeria/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round2.png.xml" value="0.121" />
