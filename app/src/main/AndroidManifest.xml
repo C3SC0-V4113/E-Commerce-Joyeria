@@ -12,12 +12,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DrawerNavigation">
-       <!-- <activity
+        <activity
+            android:name=".DetalleRegistroCompraFragment"
+            android:exported="false" />
+        <activity
+            android:name=".RegistroComprasFragment"
+            android:exported="false" />
+        <activity
+            android:name=".CarritoFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DetalleJoyaFragment"
+            android:exported="false" />
+        <!--
+         <activity
             android:name=".ui.DetalleRegaloFragment"
             android:exported="false" />
         <activity
             android:name=".ui.CollaresFragment"
-            android:exported="false" />--> <!-- <activity -->
+            android:exported="false" />
+        -->
+        <!-- <activity -->
         <!-- android:name=".ui.RegalosFragment" -->
         <!-- android:exported="false" /> -->
         <activity

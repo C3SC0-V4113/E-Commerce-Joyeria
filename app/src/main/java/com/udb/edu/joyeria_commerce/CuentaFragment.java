@@ -52,4 +52,9 @@ public class CuentaFragment extends Fragment {
         correo.setText(nombre);
         return v;
     }
+
+//    public String getUsuario(String correo){
+//        String[] textoSeparado = correo.split("@");
+//        return textoSeparado[0];
+//    }
 }

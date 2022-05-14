@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,7 +20,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.udb.edu.joyeria_commerce.AdaptadorRegalos;
+import com.udb.edu.joyeria_commerce.CarritoFragment;
+import com.udb.edu.joyeria_commerce.FiltroFragment;
 import com.udb.edu.joyeria_commerce.R;
+import com.udb.edu.joyeria_commerce.RegistroComprasFragment;
 import com.udb.edu.joyeria_commerce.datos.RegaloModel;
 
 import java.util.ArrayList;
@@ -31,6 +35,8 @@ public class RegalosFragment extends Fragment {
 
     private List<RegaloModel> regalos;
     private ListView listaRegalos;
+
+    ImageButton btnBusqueda, btnCarrito, btnRegistroCompras;
 
     public RegalosFragment() {
         // Required empty public constructor
@@ -45,7 +51,40 @@ public class RegalosFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_regalos, container, false);
+        View vista=inflater.inflate(R.layout.fragment_regalos, container, false);
+
+
+        // Cambio a la vista de búsqueda (filtros)
+        btnBusqueda = vista.findViewById(R.id.btnBusqueda);
+        btnBusqueda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FiltroFragment detalle = new FiltroFragment();
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
+            }
+        });
+
+        // Cambio a la vista de la compra
+        btnCarrito = vista.findViewById(R.id.btnCarrito);
+        btnCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CarritoFragment carrito = new CarritoFragment();
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,carrito).commit();
+            }
+        });
+
+        //Cambio a la vista de registro de compras
+        btnRegistroCompras = vista.findViewById(R.id.btnRegistroCompras);
+        btnRegistroCompras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RegistroComprasFragment registro = new RegistroComprasFragment();
+                getParentFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,registro).commit();
+            }
+        });
+
+        return vista;
     }
 
     @Override
@@ -57,16 +96,16 @@ public class RegalosFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
 
-                //Paso de datos del regalo seleccionado al fragment_detalle_regalo
+                //Paso de datos del producto seleccionado a fragment_detalle_joya
                 Bundle bundle = new Bundle();
-                bundle.putString("nombreRegalo", regalos.get(position).getNombre());
-                bundle.putString("precioRegalo", regalos.get(position).getPrecio().toString());
-                bundle.putString("detalleRegalo", regalos.get(position).getDetalle());
-                bundle.putString("imagenRegalo", regalos.get(position).getImagen());
+                bundle.putString("nombreProducto", regalos.get(position).getNombre());
+                bundle.putString("precioProducto", regalos.get(position).getPrecio().toString());
+                bundle.putString("detalleProducto", regalos.get(position).getDetalle());
+                bundle.putString("imagenProducto", regalos.get(position).getImagen());
                 getParentFragmentManager().setFragmentResult("key", bundle);
 
-                //Cambio de vista a fragment_detalle_regalo
-                DetalleRegaloFragment detalle = new DetalleRegaloFragment();
+                //Cambio de vista a fragment_detalle_joya
+                DetalleJoyaFragment detalle = new DetalleJoyaFragment();
                 getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
 
             }

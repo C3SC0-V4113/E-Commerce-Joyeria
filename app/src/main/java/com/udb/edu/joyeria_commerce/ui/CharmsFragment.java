@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,7 +21,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.udb.edu.joyeria_commerce.AdaptadorProducto;
+import com.udb.edu.joyeria_commerce.CarritoFragment;
+import com.udb.edu.joyeria_commerce.FiltroFragment;
 import com.udb.edu.joyeria_commerce.R;
+import com.udb.edu.joyeria_commerce.RegistroComprasFragment;
 import com.udb.edu.joyeria_commerce.datos.Producto;
 
 import java.util.ArrayList;
@@ -36,6 +40,8 @@ public class CharmsFragment extends Fragment {
     private List<Producto> productos;
     private ListView listaCharms;
 
+    ImageButton btnBusqueda, btnCarrito, btnRegistroCompras;
+
     public CharmsFragment() {
         // Required empty public constructor
     }
@@ -50,7 +56,40 @@ public class CharmsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_charms, container, false);
+        View vista=inflater.inflate(R.layout.fragment_charms, container, false);
+
+
+        // Cambio a la vista de búsqueda (filtros)
+        btnBusqueda = vista.findViewById(R.id.btnBusqueda);
+        btnBusqueda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FiltroFragment detalle = new FiltroFragment();
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
+            }
+        });
+
+        // Cambio a la vista de la compra
+        btnCarrito = vista.findViewById(R.id.btnCarrito);
+        btnCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CarritoFragment carrito = new CarritoFragment();
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,carrito).commit();
+            }
+        });
+
+        //Cambio a la vista de registro de compras
+        btnRegistroCompras = vista.findViewById(R.id.btnRegistroCompras);
+        btnRegistroCompras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RegistroComprasFragment registro = new RegistroComprasFragment();
+                getParentFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,registro).commit();
+            }
+        });
+
+        return vista;
     }
 
     @Override
@@ -59,20 +98,18 @@ public class CharmsFragment extends Fragment {
         listaCharms = view.findViewById(R.id.ListaProductos);
         listaCharms.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //Intent intent = new Intent(getContext(), FormMovie.class);
+            public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
 
-                /*intent.putExtra("titulo",peliculas.get(i).getTitulo());
-                intent.putExtra("descripcion",peliculas.get(i).getDescripcion());
-                //intent.putExtra("foto",peliculas.get(i).getFoto());
-                selectedPhoto=peliculas.get(i).getFoto();
-                intent.putExtra("estreno",peliculas.get(i).getEsteno());
-                intent.putExtra("rate",peliculas.get(i).getRate());*/
+                //Paso de datos del producto seleccionado a fragment_detalle_joya
                 Bundle bundle = new Bundle();
-                bundle.putString("nombre", productos.get(i).getNombre());
-                bundle.putString("categoria",productos.get(i).getCategoria());
-                DetalleProductoFragment detalle = new DetalleProductoFragment();
-                detalle.setArguments(bundle);
+                bundle.putString("nombreProducto", productos.get(position).getNombre());
+                bundle.putString("precioProducto", productos.get(position).getPrecio().toString());
+                bundle.putString("detalleProducto", productos.get(position).getDetalle());
+                bundle.putString("imagenProducto", productos.get(position).getImagen());
+                getParentFragmentManager().setFragmentResult("key", bundle);
+
+                //Cambio de vista a fragment_detalle_joya
+                DetalleJoyaFragment detalle = new DetalleJoyaFragment();
                 getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,detalle).commit();
 
             }

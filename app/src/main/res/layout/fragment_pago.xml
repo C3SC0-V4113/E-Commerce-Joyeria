@@ -73,7 +73,7 @@
                 app:startIconDrawable="@drawable/address">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/address"
+                    android:id="@+id/tiDireccionEnvio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arya"
@@ -138,11 +138,12 @@
                 app:startIconDrawable="@drawable/card">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/codCard"
+                    android:id="@+id/tiNumeroTarjeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arya"
-                    android:inputType="text"
+                    android:inputType="number"
+                    android:maxLength="16"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -171,11 +172,12 @@
                 app:startIconDrawable="@drawable/pincard">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/pinCard"
+                    android:id="@+id/tiPinTarjeta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arya"
-                    android:inputType="text"
+                    android:inputType="number"
+                    android:maxLength="3"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -209,18 +211,29 @@
                 app:dividerInsetEnd="16dp"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_add"
+                android:id="@+id/btnRealizarPedido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#9E81BE"
-
+                android:backgroundTint="#1E1E1E"
                 android:padding="1dp"
                 android:text="Realizar Pedido"
                 app:icon="@drawable/purchase" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#9E81BE"
+                android:padding="1dp"
+                android:text="Salir" />
 
 
 

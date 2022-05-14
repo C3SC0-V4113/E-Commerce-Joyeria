@@ -1,46 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9E81B3"
-    tools:context=".ui.AnillosFragment">
-
+    android:background="#343335"
+    tools:context=".RegistroComprasFragment">
 
     <LinearLayout
-
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#9E81B3" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:layout_marginTop="15dp"
-            app:srcCompat="@drawable/anillos"
-            app:tint="#CCBEE3" />
+        android:background="#9E81B3"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:textColor="#FFFFFF"
-            android:textAlignment="center"
             android:layout_marginBottom="20dp"
-            android:textStyle="bold"
-            android:text="Anillos" />
+            android:layout_marginTop="15dp"
+            android:text="Historial de compras"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:drawableTint="#CCBEE3"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
         <ListView
-            android:id="@+id/ListaProductos"
+            android:id="@+id/ListaRegistroCompras"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scrollbars="vertical" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,7 +46,6 @@
                 android:layout_weight="1"
                 android:background="#CCBEE3"
                 app:srcCompat="@mipmap/icono_home"
-                app:tint="#8458A5"
                 tools:srcCompat="@mipmap/icono_home" />
 
             <ImageButton
@@ -86,6 +75,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
                 android:background="#CCBEE3"
+                app:tint="#8458A5"
                 app:srcCompat="@mipmap/icono_canasta"
                 tools:srcCompat="@mipmap/icono_canasta" />
 
@@ -93,4 +83,3 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

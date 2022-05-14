@@ -1,58 +1,61 @@
 package com.udb.edu.joyeria_commerce;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PagoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.udb.edu.joyeria_commerce.ui.ProductosFragment;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class PagoFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    public static FirebaseDatabase database = FirebaseDatabase.getInstance();
+    public DatabaseReference refContador = database.getReference("contadores");
+    public DatabaseReference refRegistroCompras = database.getReference("registroCompras");
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    String correo, correoU;
+    SharedPreferences settings;
+
+    String totalCompra;
+    EditText tiDireccionEnvio, tiNumeroTarjeta, tiPinTarjeta;
+    Button btnRealizarPedido, btnCancelar;
+    int numero = 0;
 
     public PagoFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PagoFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static PagoFragment newInstance(String param1, String param2) {
-        PagoFragment fragment = new PagoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
+        getParentFragmentManager().setFragmentResultListener("key", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+                totalCompra = bundle.getString("totalCompra");
+            }
+        });
     }
 
     @Override
@@ -60,5 +63,79 @@ public class PagoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_pago, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        btnRealizarPedido = view.findViewById(R.id.btnRealizarPedido);
+        btnCancelar = view.findViewById(R.id.btnCancelar);
+        tiDireccionEnvio = view.findViewById(R.id.tiDireccionEnvio);
+        tiNumeroTarjeta = view.findViewById(R.id.tiNumeroTarjeta);
+        tiPinTarjeta = view.findViewById(R.id.tiPinTarjeta);
+
+
+
+        //Obtención de correo del usuario
+        settings = getContext().getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+        correo=settings.getString("email","");
+        //Elimnando puntos en el correo
+        correoU = correo.replace(".","");
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ProductosFragment pantallaProductos = new ProductosFragment();
+                getFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,pantallaProductos).commit();
+            }
+        });
+
+        btnRealizarPedido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                refContador.child(""+correoU).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dato) {
+                        numero = Integer.parseInt(dato.child("numero").getValue().toString());
+
+                        String direccionEnvio = tiDireccionEnvio.getText().toString();
+                        String numeroTarjeta = tiNumeroTarjeta.getText().toString();
+                        String pinTarjeta = tiPinTarjeta.getText().toString();
+
+                        Map<String, Object> datoRegistro = new HashMap<>();
+
+                        datoRegistro.put("id",numero);
+                        datoRegistro.put("direccion", direccionEnvio);
+                        datoRegistro.put("numeroTarjeta", numeroTarjeta);
+                        datoRegistro.put("pinTarjeta", pinTarjeta);
+                        datoRegistro.put("total", totalCompra);
+
+                        refRegistroCompras.child(""+correoU).child("compra"+numero).setValue(datoRegistro);
+
+                        if(getActivity()!=null){
+                            Toast.makeText(getContext(),
+                                    "Se ha realizado el pedido correctamente",Toast.LENGTH_SHORT).show();
+                        }
+
+
+                        //Incrementando el contador para una nueva compra
+                        numero++;
+                        refContador.child(""+correoU).child("numero").setValue(numero);
+
+                        tiDireccionEnvio.setText("");
+                        tiNumeroTarjeta.setText("");
+                        tiPinTarjeta.setText("");
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+
+                });
+
+            }
+        });
+
     }
 }

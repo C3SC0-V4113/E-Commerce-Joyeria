@@ -22,38 +22,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#CD9E81B3"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/ivImagenRegalo"
-                android:layout_width="match_parent"
-                android:layout_height="190dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="30dp"
-                android:scaleType="centerCrop" />
+            android:padding="20dp"
+            android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/tvNombreRegalo"
-                android:layout_width="match_parent"
+                android:id="@+id/tvNombreRegistro"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="40dp"
-                android:fontFamily="@font/rubik_light"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="24dp" />
-
-            <TextView
-                android:id="@+id/tvPrecioRegalo"
-                android:layout_width="192dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="60dp"
-                android:fontFamily="@font/b612_mono"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
                 android:textSize="24dp"
-                android:textStyle="bold" />
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/rubik_light"
+                android:layout_weight="1"
+                android:text="Mi compra" />
+
+            <TextView
+                android:id="@+id/tvTotalRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/rubik_light"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="$Total" />
+
 
         </LinearLayout>
 

@@ -50,20 +50,20 @@ public class DetalleRegaloFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getParentFragmentManager().setFragmentResultListener("key", this, new FragmentResultListener() {
-            @Override
-            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
-                String nombreRegalo = bundle.getString("nombreRegalo");
-                String precioRegalo = bundle.getString("precioRegalo");
-                String detalleRegalo = bundle.getString("detalleRegalo");
-                String imagenRegalo = bundle.getString("imagenRegalo");
-
-                tvNombreRegalo.setText("" + nombreRegalo);
-                tvPrecioRegalo.setText("$" + precioRegalo);
-                tvDetalleRegalo.setText("" + detalleRegalo);
-                Picasso.get().load(imagenRegalo).into(ivImagenRegalo);
-            }
-        });
+//        getParentFragmentManager().setFragmentResultListener("key", this, new FragmentResultListener() {
+//            @Override
+//            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+//                String nombreRegalo = bundle.getString("nombreRegalo");
+//                String precioRegalo = bundle.getString("precioRegalo");
+//                String detalleRegalo = bundle.getString("detalleRegalo");
+//                String imagenRegalo = bundle.getString("imagenRegalo");
+//
+//                tvNombreRegalo.setText("" + nombreRegalo);
+//                tvPrecioRegalo.setText("$" + precioRegalo);
+//                tvDetalleRegalo.setText("" + detalleRegalo);
+//                Picasso.get().load(imagenRegalo).into(ivImagenRegalo);
+//            }
+//        });
     }
 
     @Override
